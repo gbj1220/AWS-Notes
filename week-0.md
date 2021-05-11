@@ -1,5 +1,7 @@
 `2021-05-10`
 
+# `Module 1 - General Knowledge`
+
 - Use sandbox and follow tutorials on aws.amazon.com
 - Cloud computing is the on-demand delivery of compute power, database, storage, applications, and other IT resources via the internet with pay-as-you-go pricing.
 
@@ -43,7 +45,7 @@
 - If you overestimate you waste money and if you underestimate you are spending more than you need to
 - Can spin up a new server on AWS if website is getting too much traffic and overloading
 
-## Intro to AWS Section 3
+## Intro to AWS
 
 - A web service is any piece of software that makes itself available over the internet and uses a standardized format -such as Extensible Markup Language (XML) or JavaScript Object Notation (JSON) for the request and the response of an application programming interface (API) interaction.
 
@@ -64,7 +66,7 @@
 
 - Provides guidance and best practices to help organizations build a comprehensive approach to cloud computing across the organization and throughout the IT lifecycle to accelerate successful cloud adoption
 
-`2021-05-11`
+# `Module 2 - Pricing`
 
 ## AWS Pricing Model:
 
@@ -107,16 +109,43 @@ Instances, you can save up to 75 percent over equivalent on-demand capacity. Res
 
 ## Services With No Charge:
 
-- **Amazon Virtual Private Cloud (Amazon VPC):** Enables you to provision a logically isolated section of the AWS Cloud where you can launch AWS in a virtual network that you define
+- **Amazon Virtual Private Cloud (Amazon VPC):** _Enables you to provision a logically isolated section of the AWS Cloud where you can launch AWS in a virtual network that you define_
 
-- **AWS Identity and Access Management (IAM):** Controls your users’ access to AWS services and resources
+- **AWS Identity and Access Management (IAM):** _Controls your users’ access to AWS services and resources_
 
-- **Consolidated Billing:** Is a billing feature in AWS Organizations to consolidate payment for multiple AWS accounts or multiple Amazon Internet Services Private Limited (AISPL) accounts. Consolidated billing provides:•One bill for multiple accounts.•The ability to easily track each account’s charges.•The opportunity to decrease charges as a result of volume pricing discounts from combined usage.•And you can consolidate all of your accounts using Consolidated Billing and get tiered benefits.
+- **Consolidated Billing:** _Is a billing feature in AWS Organizations to consolidate payment for multiple AWS accounts or multiple Amazon Internet Services Private Limited (AISPL) accounts. Consolidated billing provides:•One bill for multiple accounts.•The ability to easily track each account’s charges.•The opportunity to decrease charges as a result of volume pricing discounts from combined usage.•And you can consolidate all of your accounts using Consolidated Billing and get tiered benefits._
 
-- **AWS Elastic Beanstalk:** An even easier way for you to quickly deploy and manage applications in the AWS Cloud.
+- **AWS Elastic Beanstalk:** _An even easier way for you to quickly deploy and manage applications in the AWS Cloud._
 
-- **AWS CloudFormation:** Gives developers and systems administrators an easy way to create a collection of related AWS resources and provision them in an orderly and predictable fashion.
+- **AWS CloudFormation:** _Gives developers and systems administrators an easy way to create a collection of related AWS resources and provision them in an orderly and predictable fashion._
 
-- **Automatic Scaling:** Automatically adds or removes resources according to conditions you define. The resources you are using increase seamlessly during demand spikes to maintain performance and decrease automatically during demand lulls to minimize costs.
+- **Automatic Scaling:** _Automatically adds or removes resources according to conditions you define. The resources you are using increase seamlessly during demand spikes to maintain performance and decrease automatically during demand lulls to minimize costs._
 
-- **AWS OpsWorks:** An application management service that makes it easy to deploy and operate applications of all shapes and sizes.
+- **AWS OpsWorks:** _An application management service that makes it easy to deploy and operate applications of all shapes and sizes._
+
+## Key Notes:
+
+- Pay for what you use
+- Start and stop anytime
+- No long-term contracts are required
+- Some services are free, but the other AWS services that they provision might not be free
+
+## No charge for:
+
+1. Inbound data transfer
+2. Data transfer between services within the same AWS Region
+
+## On-Premises:
+
+- On-premises infrastructure is installed locally on a company's own computers and servers
+- Fixed-Costs are known as Capital Expenses
+- Scaling down on-premises does not reduce any costs
+- Involves a discussion that is based on capital expenditure, long planning cycles, and multiple components to buy, build, manage, and refresh resources over time
+
+## Cloud:
+
+- A cloud infrastructure is purchased from a service provider who builds and maintains the facilities, hardware, and maintenance staff
+- Customer pays for what is used
+- Scaling up or down is simple
+- AWS Cloud involves a discussion about flexibility, agility, and consumption-based costs
+-
