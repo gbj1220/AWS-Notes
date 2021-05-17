@@ -254,15 +254,6 @@ Instances, you can save up to 75 percent over equivalent on-demand capacity. Res
 
 ---
 
-# Section 2:
-
-## Foundational Services:
-
-- Domains are global
-- Billing is global
-
----
-
 # Module 4
 
 ## Security:
@@ -308,11 +299,33 @@ Instances, you can save up to 75 percent over equivalent on-demand capacity. Res
 
 ---
 
-# `Section 2`
-
 ## **IAM**:
 
+### Policies include:
+
+- Identity-based:
+
+  - Attach a policy to any IAM entity such as an IAM user, IAM group, or an IAM role.
+
+- Policies specify:
+
+  - Actions that may be performed by the entity.
+  - Actions that may not be performed by the entity.
+
+- A single policy can be attached to multiple entities.
+- A single entity can have multiple policies attached to it.
+
+- Resource-based polices:
+
+  - Attached to a resource (such as an s3 bucket)
+
+  - Specifies who has access to the resource and what actions they can perform on it.
+  - The policies are inline only, not managed.
+  - Supported only by some AWS services.
+
 - Identity and access management
+
+- use IAM to manage access to aws resources
 
 - Use IAM to manage access to AWS resources:
 
@@ -332,4 +345,107 @@ Instances, you can save up to 75 percent over equivalent on-demand capacity. Res
 
 - Manage who has access to what resources.
 
+- Policies are json objects with lots of properties.
+
+- The "Effect" is where you can explicitly use "Allow" || "Deny".
+
+- An explicit deny statement always takes precedence over an allow statement.
+
+- Permission default to "Deny" unless explicitly told to "Allow".
+
+## Groups:
+
+- An IAM group is a collection of IAM users.
+- A group is used to grant the same permissions to multiple users.
+- A user can belong to multiple groups.
+- There is no default group.
+- Groups cannot be nested.
+- There is no default group that automatically includes all users in the AWS account.
+
+-
+- If you want to have a group with all account users in it, you need to create the group and add each new user to it.
+
+- An IAM role is an IAM identity with specific permissions.
+- Similar to an IAM user as you attach policies to it.
+- Not uniquely associated with one person
+- Intended to be assumable by a person, application, or service.
+- Role provides temporary security credentials.
+
 ---
+
+## AWS CloudTrail:
+
+- AWS CloudTrail is a service that logs all API requests to resources in your account. In this way, it enables operational auditing on your account.
+- CloudTrail tracks user activity on your account.
+  - Logs all API requests to resources in all supported services your account.
+- Basic AWS CloudTrail event history is enabled by default and is free.
+  - Contains all management event data on latest 90 days of event.
+
+### Accessing CloudTrail:
+
+- 1. Log in to the AWS Management Console and choose the CloudTrail service.
+- 2. Click Event history to view, filter, and search the last 90 days of events.
+
+### To enable logs beyond 90 days and enable specified event alerting, create a trail.
+
+---
+
+## AWS Organizations:
+
+- _OU: Organizational Unit_
+
+- _Enables you to consolidate multiple AWS accounts so that you centrally manage them._
+- _Security Features of AWS Organizations:_
+
+  - _Group AWS accounts into organizational units (OUs) and attach different access policies to each OU._
+  - _Integration and support for IAM:_
+
+    - _Permissions to a user are the intersection of what is allowed by AWS Organizations and what is granted by IAM in that account._
+
+  - _User service control policies to establish control over the AWS services and API actions that each AWS account can access._
+
+## Service control policy (SCP):
+
+- _offer centralized control over accounts._
+- _limit permissions available in an account that is part of an organization_
+
+### SCPs are similar to IAM permissions policies except:
+
+- _an SCP never grants permissions_
+- _SCPs specify the maximum permissions for an organization_
+
+## AWS Key Management Service (AWS AKM):
+
+- _a service that enables you to create and manage encryption keys, and to control the use of encryptions across a wide range of AWS services and your applications_
+- _integrates with AWS CloudTrail to log all key usage_
+- _uses hardware security modules (HSMs) that are validated by Federal Information Processing Standards (FIPS) 140-2 to protect keys_
+
+---
+
+## AWS Shield:
+
+- _a managed distributed denial of service (DDoS) protection service that safeguards applications that run on AWS_
+- _provides always-on detection and automatic inline mitigations that minimize application downtime and latency, so there is no need to engage AWS Support to benefit from DDoS protection_
+- _helps protects your website from all types of DDoS attacks, including Infrastructure layer attacks (like User Datagram Protocol—or UDP—floods), state exhaustion attacks (like TCP SYN floods), and application-layer attacks (like HTTP GET or POST floods)_
+
+- _AWS Shield Standard is automatically enabled for all AWS customers at no extra cost_
+
+- _AWS Shield Advanced is the paid for option with additional protections_
+
+---
+
+## Securing Data on AWS:
+
+- _Supports encryption of data at rest_
+  - _Data at rest = Data stored physically (on disk or tape)_
+  - _Can encrypt any data stored on AWS services_
+
+### Data in Transit:
+
+- _refers to data that is moving across the network_
+- _encryption of data in transit is accomplished using Transport Layer Security (TLS)_
+- **FORMERLY KNOWN AS SSL**
+
+### AWS Certificate Manager:
+
+- _a service that enables you to provision, manage, and deploy SSL or TLS certificates for use with AWS services and your internal connected resources._
